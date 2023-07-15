@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">        
+    <title>TempConverter-Degree converter</title>    
+</head>
+<body>    
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo"><img src="images/logo.jpg.png" alt="logo"></div>                                  
+        </ul>
+        <div class="rightnav v-class-resp">
+            <input type="text" name="search" id="search" placeholder="Enter your query">
+            <button class="btn btn-sm">Search</button>
+            <button class="btn-sm1">LOGIN</button> 
+        </div>                      
+    </nav>
+
+    <section class="background firstSection">        
+        <div class="box-main">            
+            <div class="firsthalf">
+                <p class="text-big">TempConverter</p>
+                <p class="text-small">A Temperature Converter App</p>               
+            </div>
+
+            <div class="secondhalf">
+                <img src="images/logo.jpg.png" alt="Youtube Thubnail"></div>
+        </div>    
+    </section>
+
+
+    <section class="section1" id="home">
+        <div class="paras"> 
+        <p class="sectionTag">Fahrenheit to Degree Celsius</p>
+         <p class="sectionSubTag">While you're mastering these conversions, it might be interesting to learn how the Fahrenheit temperature scale came into existence. The first mercury thermometer was invented by German scientist Daniel Fahrenheit in 1714. His scale divides the freezing and boiling points of water into 180 degrees, with 32 degrees as water's freezing point, and 212 as its boiling point.</p>>
+
+         <p class="sectionSubTag">On Fahrenheit's scale, zero degrees was determined as the temperature of a temperature-stable brine solution of ice, water, and ammonium chloride. He based the scale on the average temperature of the human body, which he originally calculated at 100 degrees. (As noted, it's since been adjusted to 98.6 degrees Fahrenheit.)</p>>
+            
+         <p class="sectionSubTag">Fahrenheit was the standard unit of measure in most countries until the 1960s and 1970s when it was replaced with the Celsius scale in a widespread conversion to the more useful metric system. In addition to the United States and its territories, Fahrenheit is still used in the Bahamas, Belize, and the Cayman Islands for most temperature measurements.</p>
+        </div>                
+        <div class="convertfd">
+            <script src="resp.js"></script>
+               <h2>Fahrenheit to Celsius Converter</h2>
+               <label for="fahrenheit">Fahrenheit:</label>
+               <input type="number" id="fahrenheit">
+               <button onclick="convertfd()">Convert</button>
+               <br><br>
+               <label for="celsius">Celsius:</label>
+               <input type="number" id="celsius" readonly>
+        </div>
+            <div class="thumbnail1">
+                <img src="images/img.jpg.png" alt="Laptop image" class="imgFluid">
+            </div>            
+    </section>            
+
+<hr>
+
+    <section class="section2" id="home">
+        <div class="paras"> 
+        <p class="sectionTag">Degree Celsius to Fahrenheit</p>
+         
+        <p class="sectionSubTag">Celsius to Fahrenheit is the conversion of temperature from Celsius unit to Fahrenheit unit. Temperature scales provide a way of measuring how hot or cold a body is. Fahrenheit and celsius are temperature scales. The Celsius scale was invented by Anders Celsius, a Swedish astronomer, in 1742 and the Fahrenheit scale was invented by Daniel Gabriel Fahrenheit, a German physicist, in 1724. The symbol used for Fahrenheit is °F whereas for Celsius it's °C.</p>
+        
+        <p class="sectionSubTag">Water freezes at 32° Fahrenheit and boils at 212° Fahrenheit on a Fahrenheit scale whereas, on Celsius or centigrade scale, water freezes at 0° Celsius and boils at 100° Celsius. i.e., the Celsius and Fahrenheit scales have different reference points and thus, learning the C to F formula for conversion of Celsius to Fahrenheit is important.</p>
+        </div>        
+        <div class="convertdf">
+            <script src="resp.js"></script>
+            <h2>Celsius to Fahrenheit Converter</h2>
+            <label for="celsius1">Celsius:</label>
+            <input type="number" id="celsius1">
+            <button onclick="convertdf()">Convert</button>
+            <br><br>
+            <label for="fahrenheit1">Fahrenheit:</label>
+            <input type="number" id="fahrenheit1" readonly>
+        </div>
+            <div class="thumbnail1">
+                <img src="images/img1.jpg.png" alt="Laptop image" class="imgFluid">
+            </div> 
+            <hr>           
+    </section>
+
+
+    
+    <section class="contact" id="contact">        
+        <h2 class="Text-center">Contact Us</h2>
+            <div class="Form">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <input type="text" name="Name" id="Name" placeholder=" Enter your name">
+                <input type="number" name="Phone no." id="Phone no." placeholder=" Enter your phone no.">
+                <input type="email" name="email" id="email" placeholder=" Enter your email">                
+                    <textarea name="textbody" id="Message" cols="30" rows="5" placeholder="Elaborate Your Concern"></textarea>
+                <button class="btn btn-dark">Submit</button>
+            </form>
+            </div> 
+            <div class="centerdiv">
+                <a href="">
+
+                </a>
+            </div>       
+    </section>
+
+    <footer class="background">
+        <p class="text-footer">
+            Copyright &copy; 2023 www.TempConverter.com - All Rights Reserved
+        </p>
+    </footer>
+    <script src="resp.js"></script>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "clickaife@gmail.com",
+            Password : "Photography@786",
+            To : 'muskanringceremony@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Contact from website",
+            Body : "Name" +document.getElementById("Name").value
+            + "<br> Phone no.: " +document.getElementById("Phone no.").value
+            + "<br> email: " +document.getElementById("email").value
+            + "<br> Message: " +document.getElementById("Message").value
+            }).then(
+        message => alert("Message Sent Successfully")
+        );
+        }
+    </script>    
+</body>
+</html>
