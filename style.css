@@ -21,7 +21,7 @@ html{
     display : flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
+    position:static;
     top: 0;
     cursor: pointer;    
 }
